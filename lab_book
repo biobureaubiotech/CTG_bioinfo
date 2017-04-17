@@ -1,0 +1,10 @@
+April 17th, 2017
+
+Today I've done the BLAST of all 60717 L. fortunei proteins predicted in the genome against A. gambiae proteins related to fertility publishe
+in a Nature Biotechnology paper (Hammond et al., 2017 doi:10.1038/nbt.3439 ) 
+
+Database was all the protein sequences present at Supplementary Table 5 of the above paper, although 4 sequences listed on Table 5 was not
+present on the genome of A. gambiae downloaded from the Esembl browser, nor were find went specificaly searched on the Esembl website.
+Those not found sequences are: AGAP011235-PA, AGAP010915-PA, AGAP007997-PA, AGAP012170-PA.
+
+First local BLAST results are at biobureau gdrive: https://drive.google.com/drive/u/1/folders/0B2pYU5fjrq3EczhILWRyWDBTa3M 
