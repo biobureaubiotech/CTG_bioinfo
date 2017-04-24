@@ -8,3 +8,9 @@ present on the genome of A. gambiae downloaded from the Esembl browser, nor were
 Those not found sequences are: AGAP011235-PA, AGAP010915-PA, AGAP007997-PA, AGAP012170-PA.
 
 First local BLAST results are at biobureau gdrive: https://drive.google.com/drive/u/1/folders/0B2pYU5fjrq3EczhILWRyWDBTa3M 
+
+
+
+April 24th, 2017.
+
+blastp -query Anopheles_gambiae.AgamP4.pep.crisanti.fasta -db /home/ubuntu/nr -evalue 1e-05 -num_threads 4 -out Anopheles_gambiae.AgamP4.pep.crisanti.fasta.blast-NR.1e05 &
