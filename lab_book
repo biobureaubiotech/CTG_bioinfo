@@ -19,3 +19,7 @@ blastp -query Anopheles_gambiae.AgamP4.pep.crisanti.fasta -db /home/ubuntu/nr -e
 
 
 1-) Another BLAST from today: L. fortunei proteins against molluscan reproduction genes Ju_Americo have choosen.
+
+makeblastdb -in mollusca.rep.fa -dbtype prot
+blastp -query marcela.fasta -db molluscan_genes/mollusca.rep.fa -evalue 1e-05 -num_threads 4 -out marcela.mollusca.rep.fa1e05 &
+
