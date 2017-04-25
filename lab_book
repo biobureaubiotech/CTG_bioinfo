@@ -23,3 +23,15 @@ blastp -query Anopheles_gambiae.AgamP4.pep.crisanti.fasta -db /home/ubuntu/nr -e
 makeblastdb -in mollusca.rep.fa -dbtype prot
 blastp -query marcela.fasta -db molluscan_genes/mollusca.rep.fa -evalue 1e-05 -num_threads 4 -out marcela.mollusca.rep.fa1e05 &
 
+April, 25th 2017
+
+BLASTing all reproduction mollucans mRNA and proteins against marcela.fasta
+I'm doing this in Amazon, in the isntance called CTG_BLAST 
+ blastp -query marcela.fasta -db molluscan_genes/mollusca.rep.fa -evalue 1e-05 -num_threads 4 -out marcela.mollusca.rep.fa1e05 &
+ 
+
+
+BLASTing L. fortunei VASA protein JuAmerico found with the transcripts assembled from Trinity. Just to check. The protein is well conserved
+but it looks like its missing 100aa at the beginning.
+
+/data2/Marcela/scripts/ncbi-blast-2.4.0+/bin/tblastn -query vasa.lf.fa -db /data2/Marcela/data/rna-seq/trinti.1.2.3/Trinities.1.2.3.fasta -evalue 1e-05 -num_threads 4 -out vasa.trinity1.2.3.tblastn &
