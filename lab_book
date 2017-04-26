@@ -43,3 +43,13 @@ perl /home/bioma/scripts/PASApipeline-2.0.2/pasa-plugins/transdecoder/transcript
 makeblastdb -in c_elegans.PRJNA13758.WS258.protein.sterile.fa -dbtype prot
 
 nohup blastp -query ../marcela.fasta -db /home/ubuntu/c_elegans/c_elegans.PRJNA13758.WS258.protein.sterile.fa -evalue 1e-05 -num_threads 4 -out marcela.c_elegans.PRJNA13758.WS258.protein.sterile.1e05 &
+
+
+26 April, 2017
+
+How to get a whole line by a list of IDs.
+
+awk 'NR==FNR{tgts[$1]; next} $1 in tgts' file1 file2
+
+
+
