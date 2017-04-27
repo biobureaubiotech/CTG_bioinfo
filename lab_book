@@ -52,4 +52,22 @@ How to get a whole line by a list of IDs.
 awk 'NR==FNR{tgts[$1]; next} $1 in tgts' file1 file2
 
 
+April 27th, 2017.
+
+Today I'll curate the possible VASA gene Ju found among the golden Mussel proteins. Which means I'll look into the scaffolds from 
+where it was predicted, and see how much RNA-seq there is aligned to it.
+
+So the first thing is to find which scaffold it is. And it is this:
+
+L_FORTUNEI.itr6_4515
+
+Then, you get all the rna-seq aligned to it in a bam file using samtools
+
+samtools view -h all.merged.sorted.bam L_FORTUNEI.itr6_4515_ > L_FORTUNEI.itr6_4515_all.merged.sam
+
+then
+samtools view -Sb L_FORTUNEI.itr6_4515_all.merged.sam -o L_FORTUNEI.itr6_4515_all.merged.bam
+
+
+
 
