@@ -67,7 +67,21 @@ samtools view -h all.merged.sorted.bam L_FORTUNEI.itr6_4515_ > L_FORTUNEI.itr6_4
 
 then
 samtools view -Sb L_FORTUNEI.itr6_4515_all.merged.sam -o L_FORTUNEI.itr6_4515_all.merged.bam
+samtools sort
+samtools index
 
+then
+Get the fasta for the scaffold
+and
+Get the gff for the scaffold
+
+/data2/Marcela/scripts/Python-3.5.2/python /data2/Marcela/scripts/biocode/gff/filter_gff3_by_id_list.py -i /data2/Marcela/pasa.itr6/marcelAAAa_pasa.gene_structures_post_PASA_updates.85229.gff3 -o id.bla.gff3 -l /data2/Marcela/hisat2/id.bla
+
+Then sort, zip and tabix the gff
+
+sort -k1,1 -k4,4n -rk3,3n id.bla.gff3 > id.bla.sorted.gff
+bgzip id.bla.sorted.gff
+tabix -p gff id.bla.sorted.gff.gz
 
 
 
