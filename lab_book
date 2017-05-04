@@ -89,11 +89,27 @@ Finding best reciprocal BLAST hit!
 
 I found this script and I'm using it: https://github.com/peterjc/galaxy_blast/blob/master/tools/blast_rbh/blast_rbh.py
 
-
-RBBH - c.elegans and L. fortunei;
-
+The first I did was to use the BLAST matches ju found between LF and C_elegans (Celegans_Agambiae_Hits_evalue50_ID60.xlsx).
+The fasta files are at local machine:
+/home/bioma/2017_marcela/CTG/lf.blas.celegans.interest.fasta
+/home/bioma/2017_marcela/CTG/c_elegens.interested.fasta
+I've modified same names in the c_elegans file because there are more than 1 protein per locus, so they have the same inicial name
+the file is called c_elegens.interested.id.modified.forRBBH (on gdocs)
+Then I run the program localy:
 bioma@bioma-XPS-8300:~/2017_marcela/CTG$ python ../../scripts/filterfasta.py -i lf.blas.celegans.interest.id ../mexilhao_tese_preeprint/marcela.fasta > lf.blas.celegans.interest.fasta
 bioma@bioma-XPS-8300:~/2017_marcela/CTG$ python ../../scripts/rbbh.py -a prot -t blastp -o output.tsv lf.blas.celegans.interest.fasta c_elegens.interested.fasta
-
+Result:
 Done, 19 RBH found
 Warning: Sequences with tied best hits found, you may have duplicates/clusters
+
+Result file called: lf.ce-elegans.RBBH (on gdocs)
+
+- RBBH analysis with molluscan proteins. Only vasa protein got that for now
+
+python ../../scripts/filterfasta.py -i molluscan.reproduction.LF.blastp.lf.id ../mexilhao_tese_preeprint/marcela.fasta > molluscan.reproduction.LF.blastp.lf.fasta
+less molluscan.reproduction.LF.blastp.lf.fasta
+python ../../scripts/rbbh.py -h
+python ../../scripts/rbbh.py -a prot -t blastp -o lf.molluscan-reproduction.RBBH --threads=4 molluscan.reproduction.LF.blastp.lf.fasta sequence-proteins-JU.fasta
+ls -ltr
+less lf.molluscan-reproduction.RBBH
+
