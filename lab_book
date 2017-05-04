@@ -83,5 +83,17 @@ sort -k1,1 -k4,4n -rk3,3n id.bla.gff3 > id.bla.sorted.gff
 bgzip id.bla.sorted.gff
 tabix -p gff id.bla.sorted.gff.gz
 
+May, 4th (be with you!) 2017.
+
+Finding best reciprocal BLAST hit!
+
+I found this script and I'm using it: https://github.com/peterjc/galaxy_blast/blob/master/tools/blast_rbh/blast_rbh.py
 
 
+RBBH - c.elegans and L. fortunei;
+
+bioma@bioma-XPS-8300:~/2017_marcela/CTG$ python ../../scripts/filterfasta.py -i lf.blas.celegans.interest.id ../mexilhao_tese_preeprint/marcela.fasta > lf.blas.celegans.interest.fasta
+bioma@bioma-XPS-8300:~/2017_marcela/CTG$ python ../../scripts/rbbh.py -a prot -t blastp -o output.tsv lf.blas.celegans.interest.fasta c_elegens.interested.fasta
+
+Done, 19 RBH found
+Warning: Sequences with tied best hits found, you may have duplicates/clusters
