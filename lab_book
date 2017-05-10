@@ -113,3 +113,28 @@ python ../../scripts/rbbh.py -a prot -t blastp -o lf.molluscan-reproduction.RBBH
 ls -ltr
 less lf.molluscan-reproduction.RBBH
 
+10th May of 2017.
+- Already asked for a quotation to resequence a male and a female golden mussel (genone).
+- Today I'm looking into which proteins and scaffolds the trinity (vasa) transcripts TR79527-c2__g1__i3 len=3794, TR76527-c0_g1_i2 len=3728, TR76527-c0_g1_i5 len=3477 
+represent.
+
+So, First I've blasted them against marcela.fasta
+blastx -query trinity.vasas.fasta -db /data2/Marcela/marcela.fasta.an/marcela.fasta -evalue 1e-05 -out trinity-vasas_marcela.fasta.blastx1e05
+Best hits:
+TR79527-c2__g1__i3      itr6_4515_pi.g108.t1    100.00  562     0       0       1111    2796    17      578     0.0     1127    44.44   91.68
+TR76527-c0_g1_i2        itr6_4515_pi.g108.t1.1.57f69240 100.00  537     0       0       1120    2730    17      553     0.0     1075    43.21   91.33
+TR76527-c0_g1_i5        itr6_4515_pi.g108.t1.1.57f69240 100.00  537     0       0       869     2479    17      553     0.0     1075    46.33   91.33
+
+All "good" hits:
+TR79527-c2__g1__i3      itr6_4515_pi.g108.t1    100.00  562     0       0       1111    2796    17      578     0.0     1127    14.81   91.68
+TR79527-c2__g1__i3      itr6_4515_pi.g108.t1.1.57f69240 99.46   552     3       0       1141    2796    2       553     0.0     1099    14.47   93.37
+TR79527-c2__g1__i3      itr6_4515_pi.g108.t1.2.57f69240 99.43   527     3       0       1216    2796    2       528     0.0     1045    13.81   93.07
+TR79527-c2__g1__i3      itr6_4515_pi.g108.t1.3.57f69240 99.81   518     1       0       1111    2664    17      534     0.0     1031    13.63   92.99
+TR76527-c0_g1_i2        itr6_4515_pi.g108.t1.1.57f69240 100.00  537     0       0       1120    2730    17      553     0.0     1075    14.40   91.33
+TR76527-c0_g1_i2        itr6_4515_pi.g108.t1    100.00  537     0       0       1120    2730    42      578     0.0     1075    14.40   87.60
+TR76527-c0_g1_i2        itr6_4515_pi.g108.t1.2.57f69240 99.43   527     3       0       1150    2730    2       528     0.0     1046    14.06   93.07
+TR76527-c0_g1_i2        itr6_4515_pi.g108.t1.3.57f69240 99.80   493     1       0       1120    2598    42      534     0.0     979     13.20   88.49
+TR76527-c0_g1_i5        itr6_4515_pi.g108.t1.1.57f69240 100.00  537     0       0       869     2479    17      553     0.0     1075    15.44   91.33
+TR76527-c0_g1_i5        itr6_4515_pi.g108.t1    100.00  537     0       0       869     2479    42      578     0.0     1075    15.44   87.60
+TR76527-c0_g1_i5        itr6_4515_pi.g108.t1.2.57f69240 99.43   527     3       0       899     2479    2       528     0.0     1046    15.07   93.07
+TR76527-c0_g1_i5        itr6_4515_pi.g108.t1.3.57f69240 99.80   493     1       0       869     2347    42      534     0.0     979     14.15   88.49
