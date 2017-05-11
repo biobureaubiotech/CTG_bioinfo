@@ -146,4 +146,8 @@ investigate the gff and the scaffold where they are coded.
 Aligment result in the local computer:
 /home/bioma/2017_marcela/CTG/transdecoderlong.genome.mitgigas.vasas.aln
 
+11th of May, 2017
+Trying to find RBBH with all mollusks versus marcela.fasta
+python ../../scripts/rbbh.py -a prot -t blastp -o allmoluscs.marcelafasta sequence-proteins-JU.fasta /home/bioma/2017_marcela/mexilhao_tese_preeprint/marcela.fasta
+
 
