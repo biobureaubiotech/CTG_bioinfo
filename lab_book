@@ -155,4 +155,6 @@ python ../../scripts/rbbh.py -a prot -t blastp -o allmoluscs.marcelafasta sequen
 Testing how to create consensus from mapped reads using samtools. 
 So, I've downloaded a bam file from allegro, where the 500bp pair end were aligned to the genome. Then we have:
 samtools mpileup -d 8000 -E -uf Draftfinal_itr6.pilon6.fasta itr6finalcoverage.500.006.sorted.bam | bcftools view -cg - | vcfutils.pl vcf2fq > cns.fastq
-
+Also check:
+https://www.biostars.org/p/70585/
+https://www.biostars.org/p/225064/
