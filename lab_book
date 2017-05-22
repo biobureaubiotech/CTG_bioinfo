@@ -209,4 +209,63 @@ Programs available:
 Fprom – softberry (já rodando)
 
 
+22th of May, 2017
+
+Identification of beta-tubulins:
+
+I've downloaded some beta-tubulins from Uniprot for C. gigas and for Mytilus. File: /home/bioma/2017_marcela/CTG/CG.mytilus.uniprot.betaTubulin.fa
+Then runned a BLAST:
+makeblastdb -in CG.mytilus.uniprot.betaTubulin.fa -dbtype prot
+blastp -query marcela.fasta -db CG.mytilus.uniprot.betaTubulin.fa -evalue 1e-05 -out marcela.CG.mytilus.uniprot.betaTubulin1e05 &
+
+BLAST BHcov result:
+itr6_5034_pi.g1088.t1   tr|K1R278|K1R278_CRAGI  38.39   435     256     12      404     838     2       424     3e-113  343     50.88   94.84
+itr6_5034_pi.g1091.t1   tr|K1R278|K1R278_CRAGI  39.26   433     253     10      37      469     2       424     5e-122  354     89.09   94.84
+itr6_5034_pi.g1085.t1   tr|K1R278|K1R278_CRAGI  39.14   419     245     10      1       419     16      424     3e-117  340     96.10   91.70
+itr6_5034_pi.g1096.t1   tr|K1R278|K1R278_CRAGI  39.40   434     253     10      15      448     1       424     3e-123  357     93.33   95.07
+itr6_3927_pi.g551.t1    tr|K1R7V7|K1R7V7_CRAGI  45.14   288     154     4       43      329     2       286     2e-81   246     73.21   63.90
+itr6_3927_pi.g551.t1.1.57f6923f tr|K1R7V7|K1R7V7_CRAGI  45.33   289     154     4       1       288     1       286     1e-82   248     82.05   64.13
+itr6_2039_pi.g1537.t1   tr|K1R278|K1R278_CRAGI  39.63   434     252     10      1       434     1       424     2e-123  357     96.23   95.07
+itr6_26_pilo.g431.t1    tr|K1R278|K1R278_CRAGI  47.37   57      30      0       2       58      368     424     4e-18   65.9    73.08   12.78
+itr6_4255_pi.g441.t1    tr|K1R278|K1R278_CRAGI  24.79   121     80      11      273     393     313     422     1e-09   48.5    24.35   24.66
+itr6_4255_pi.g438.t1    tr|K1R7V7|K1R7V7_CRAGI  37.43   171     73      34      10      147     106     275     3e-27   97.1    67.98   38.12
+itr6_222_pil.g2785.t1   tr|K1QAJ5|K1QAJ5_CRAGI  92.62   325     23      1       42      366     10      333     0.0     595     47.17   75.52
+itr6_222_pil.g2784.t1   tr|K1PN21|K1PN21_CRAGI  91.73   411     24      10      134     534     20      430     0.0     781     73.04   92.36
+itr6_222_pil.g2778.t1   tr|K1R7V7|K1R7V7_CRAGI  99.33   446     3       0       1       446     1       446     0.0     935     100.00  100.00
+itr6_222_pil.g2782.t1   tr|K1QAJ5|K1QAJ5_CRAGI  98.51   202     3       0       158     359     228     429     1e-149  419     56.27   47.09
+itr6_222_pil.g2786.t1   tr|K1R7V7|K1R7V7_CRAGI  98.65   446     5       1       1       445     1       446     0.0     925     100.00  100.00
+itr6_222_pil.g2783.t1   tr|K1QAJ5|K1QAJ5_CRAGI  96.49   399     14      0       3       401     31      429     0.0     814     99.50   93.01
+itr6_2662_pi.g1051.t1.1.57f6923e        tr|Q5NT88|Q5NT88_CRAGI  38.54   410     242     10      20      429     2       401     4e-112  330     77.65   89.69
+itr6_2662_pi.g1051.t1   tr|Q5NT88|Q5NT88_CRAGI  38.54   410     242     10      20      429     2       401     4e-112  330     77.65   89.69
+itr6_3015_pi.g1241.t1   tr|K1R278|K1R278_CRAGI  38.87   301     176     8       6       306     132     424     9e-80   240     93.19   65.70
+itr6_3015_pi.g1240.t1   tr|G0YFD6|G0YFD6_MYTED  42.25   71      39      2       486     556     1       69      1e-14   61.2    12.68   40.59
+itr6_3841_pi.g2427.t1   tr|K1QAJ5|K1QAJ5_CRAGI  48.78   82      34      8       1       82      250     323     2e-19   70.5    90.11   17.25
+itr6_3841_pi.g2425.t1   tr|Q5NT88|Q5NT88_CRAGI  92.41   316     24      0       93      408     58      373     0.0     610     77.07   70.85
+itr6_3841_pi.g2428.t1   tr|K1PN21|K1PN21_CRAGI  97.30   74      2       0       88      161     175     248     4e-48   151     45.68   16.63
+itr6_3841_pi.g2426.t1   tr|K1PN21|K1PN21_CRAGI  55.32   188     49      35      75      227     66      253     6e-57   177     67.11   42.25
+itr6_165_pil.g2044.t1   tr|K1R278|K1R278_CRAGI  38.37   443     254     19      1       443     1       424     2e-119  347     96.30   95.07
+itr6_165_pil.g2047.t1   tr|K1R278|K1R278_CRAGI  38.86   368     217     8       856     1223    65      424     5e-93   296     29.70   80.72
+itr6_165_pil.g2045.t1   tr|K1R278|K1R278_CRAGI  39.55   359     209     8       38      396     74      424     1e-101  299     86.92   78.70
+itr6_165_pil.g2046.t1   tr|G0YGJ4|G0YGJ4_MYTED  43.33   60      34      0       12      71      41      100     1e-17   62.8    83.33   35.93
+itr6_1167_pi.g2577.t1   tr|K1R7V7|K1R7V7_CRAGI  43.24   37      20      1       1       37      1       36      3e-08   40.4    26.81   8.07
+itr6_1167_pi.g2579.t1.1.57f6923b        tr|Q5NT88|Q5NT88_CRAGI  32.14   56      37      1       21      75      150     205     2e-06   38.5    11.48   12.56
+itr6_1167_pi.g2579.t1   tr|Q5NT88|Q5NT88_CRAGI  32.14   56      37      1       21      75      150     205     1e-06   38.9    12.30   12.56
+itr6_2024_pi.g1264.t1   tr|K1R7V7|K1R7V7_CRAGI  97.98   445     7       2       1       443     1       445     0.0     918     99.11   99.78
+itr6_2024_pi.g1264.t1.1.57f6923d        tr|K1R278|K1R278_CRAGI  96.78   373     12      0       1       373     73      445     0.0     768     99.47   83.63
+itr6_2024_pi.g1261.t1   tr|K1R7V7|K1R7V7_CRAGI  97.77   448     8       2       1       448     1       446     0.0     920     100.00  100.00
+itr6_4995_pi.g934.t1    tr|K1R7V7|K1R7V7_CRAGI  27.68   112     73      8       58      168     298     402     3e-06   35.4    61.33   23.54
+itr6_4995_pi.g933.t1    tr|K1R278|K1R278_CRAGI  28.81   236     140     28      4       215     5       236     1e-20   82.8    49.42   52.02
+itr6_3744_pi.g1657.t1   tr|K1PN21|K1PN21_CRAGI  46.24   266     140     3       29      293     2       265     4e-77   232     87.17   59.33
+itr6_3744_pi.g1658.t1   tr|K1R278|K1R278_CRAGI  34.59   133     79      8       1       133     300     424     4e-31   105     88.08   28.03
+itr6_224_pil.g2812.t1   tr|K1QAJ5|K1QAJ5_CRAGI  83.39   283     23      24      42      302     78      358     3e-171  472     82.33   65.50
+itr6_8379_pi.g36.t1     tr|K1QAJ5|K1QAJ5_CRAGI  97.20   214     5       1       1       214     216     428     7e-158  434     99.53   49.65
+itr6_176_pil.g2226.t1   tr|K1QAJ5|K1QAJ5_CRAGI  28.28   99      69      2       528     624     277     375     9e-13   58.9    15.25   23.08
+itr6_3438_pi.g1869.t1   tr|K1R278|K1R278_CRAGI  38.66   419     247     10      1       419     16      424     6e-108  337     34.07   91.70
+itr6_3830_pi.g2323.t1   tr|K1R278|K1R278_CRAGI  94.55   404     22      0       106     509     26      429     0.0     804     76.37   90.58
+itr6_3830_pi.g2324.t1   tr|K1R278|K1R278_CRAGI  94.86   214     11      0       186     399     1       214     3e-146  413     53.50   47.98
+itr6_3830_pi.g2322.t1   tr|K1QAJ5|K1QAJ5_CRAGI  96.77   403     13      0       22      424     27      429     0.0     815     95.05   93.94
+itr6_3830_pi.g2326.t1   tr|K1PN21|K1PN21_CRAGI  84.88   291     44      0       315     605     1       291     0.0     515     47.86   65.39
+itr6_3830_pi.g2330.t1   tr|K1PN21|K1PN21_CRAGI  88.24   255     30      0       26      280     175     429     1e-178  491     84.16   57.30
+itr6_2880_pi.g3194.t1   tr|K1R278|K1R278_CRAGI  36.18   152     89      8       175     326     281     424     4e-34   120     44.19   32.29
+
 
