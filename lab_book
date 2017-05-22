@@ -164,7 +164,7 @@ https://www.biostars.org/p/225064/
 How to find promotor regions in silico??
 Chapter I'm reading at the moment:
 https://www.researchgate.net/publication/272440150_In_silico_Identification_of_Eukaryotic_Promoters
-To download of packages like softberry
+To download packages like softberry
 http://www.softberry.com/berry.phtml?topic=fdp.htm&no_menu=on
 
 Running Fprom: Program predicts potential transcription start positions by linear discriminant function combining
@@ -176,5 +176,37 @@ selected factor binding sites from currently supported functional site data base
 
 Other online tools for single sequences search:
 http://www.genetools.us/genomics/Promoter%20databases%20and%20prediction%20tools.htm
+
+
+Promoter regions:
+
+A promoter region is generally defined as any genomic DNA where the transcrip-
+tion machinery assembles and initiates transcription. The promoter region consists
+of protein binding regions along with the transcription start site (TSS).
+
+In Eukaryotes, the promoter regions are broadly classified as core promoters,
+proximal promoters and distal promoters. The core promoter region, where the actual
+basal transcription machinery assembles, is 30–100 nucleotides in length. These
+regions are characterized by the presence of sequence motifs such as the TATA box
+and the Inr element.
+
+They may also contain downstream elements like DPE, MTE
+(in humans) along with the associated TSS (Juven-Gershon et al. 2008; Thomas
+and Chiang 2006). The proximal promoter regions are the sequences located within
+500 base pairs relative to the TSS and contain certain proximal promoter elements,
+which include the GC box, the CAAT box, cis-regulatory modules (CRM) (Lenhard
+and Sandelin 2012), etc. Distal promoter elements include enhancers, insulators and
+silencers. The distal promoter region does not have a well-defined length and can
+extend up to 10 kb from the TSS in upstream as well as downstream regions. Distal
+promoters interact with transcription activators to increase the rate of transcription. In
+vertebrates, it is known that 5 % of the genes code for specific transcription activators,
+which interact with proximal and distal promoter regions.
+
+Promoter: core (TATA Box, Inr elements  30-100 bp) + proximal (500 bp relative to the TSS – CG box, CAAT box, cis-regulatory elements) + distal 
+
+
+Programs available:
+Fprom – softberry (já rodando)
+
 
 
