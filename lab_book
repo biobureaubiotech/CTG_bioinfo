@@ -158,3 +158,19 @@ samtools mpileup -d 8000 -E -uf Draftfinal_itr6.pilon6.fasta itr6finalcoverage.5
 Also check:
 https://www.biostars.org/p/70585/
 https://www.biostars.org/p/225064/
+
+22th of May, 2017.
+
+How to find promotor regions in silico??
+Chapter I'm reading at the moment:
+https://www.researchgate.net/publication/272440150_In_silico_Identification_of_Eukaryotic_Promoters
+To download of packages like softberry
+http://www.softberry.com/berry.phtml?topic=fdp.htm&no_menu=on
+
+Running Fprom: Program predicts potential transcription start positions by linear discriminant function combining
+characteristics describing functional motifs and oligonucleotide composition of these sites. FProm uses file with
+selected factor binding sites from currently supported functional site data base.
+
+./fprom /home/bioma/2017_marcela/mexilhao_tese_preeprint/LF.genome.NCBI4.1.fasta > /home/bioma/2017_marcela/CTG/LF.genome.NCBI4.1.fasta.fprom
+
+
