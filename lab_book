@@ -274,4 +274,13 @@ I've deleted by mistake the file with the promoters. Running again:
 About the promoters: (i) its important to find out how reliable the in silico tool is, (ii) how to integrate the promoters information witht he gff, if its possible.
 OBS 2: I've created a folder Promoters in the googledocs, inside the folders EXECUÇÃO TÉCNICA and WP#1 to upload files and results about the promoters search.
 
+23th of May, 2017
+Today I've discussed with Ju Americo that we should check a best reciprocal Blast hit (RBBH) for marcela.fasta against all proteins from
+(1) anopheles genome, (2) c.elegans genome, (3) c. gigas, (4) m. galloprovincialis.
+I've started to run the RBBH for anopheles (locally)
+bioma@bioma-XPS-8300:~/2017_marcela/CTG$ python ../../scripts/rbbh.py -a prot -t blastp -o marcela.Anopheles_gambiae.AgamP4.pep.all.RBBH --threads=4 marcela.fasta Anopheles_gambiae.AgamP4.pep.all.fa
+
+I need to run the oher ones too, but I cannot run it at the same time in the local machine. Let's see how long the first job is going to take.
+Next question is: where is the BLAST of marcela.fasta against ncbi nr? Do I have it or not?
+
 
