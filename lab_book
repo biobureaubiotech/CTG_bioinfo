@@ -271,3 +271,6 @@ itr6_2880_pi.g3194.t1   tr|K1R278|K1R278_CRAGI  36.18   152     89      8       
 23th May, 2017
 I've deleted by mistake the file with the promoters. Running again:
 /home/bioma/scripts/fprom /home/bioma/2017_marcela/mexilhao_tese_preeprint/LF.genome.NCBI4.1.fasta > /home/bioma/2017_marcela/CTG/LF.genome.NCBI4.1.fasta.fprom.2
+About the promoters: (i) its important to find out how reliable the in silico tool is, (ii) how to integrate the promoters information witht he gff, if its possible.
+
+
