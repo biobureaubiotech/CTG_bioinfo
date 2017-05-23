@@ -268,4 +268,6 @@ itr6_3830_pi.g2326.t1   tr|K1PN21|K1PN21_CRAGI  84.88   291     44      0       
 itr6_3830_pi.g2330.t1   tr|K1PN21|K1PN21_CRAGI  88.24   255     30      0       26      280     175     429     1e-178  491     84.16   57.30
 itr6_2880_pi.g3194.t1   tr|K1R278|K1R278_CRAGI  36.18   152     89      8       175     326     281     424     4e-34   120     44.19   32.29
 
-
+23th May, 2017
+I've deleted by mistake the file with the promoters. Running again:
+/home/bioma/scripts/fprom /home/bioma/2017_marcela/mexilhao_tese_preeprint/LF.genome.NCBI4.1.fasta > /home/bioma/2017_marcela/CTG/LF.genome.NCBI4.1.fasta.fprom.2
