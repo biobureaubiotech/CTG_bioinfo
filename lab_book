@@ -280,6 +280,8 @@ Today I've discussed with Ju Americo that we should check a best reciprocal Blas
 I've started to run the RBBH for anopheles (locally)
 bioma@bioma-XPS-8300:~/2017_marcela/CTG$ python ../../scripts/rbbh.py -a prot -t blastp -o marcela.Anopheles_gambiae.AgamP4.pep.all.RBBH --threads=4 marcela.fasta Anopheles_gambiae.AgamP4.pep.all.fa
 
+nohup python ../scripts/rbbh.py -a prot -t blastp -o marcela.c_elegans.PRJNA13758.WS258.protein.fa.RBBH --threads=8 ../marcela.fasta.an/marcela.fasta c_elegans.PRJNA13758.WS258.protein.fa
+
 I need to run the oher ones too, but I cannot run it at the same time in the local machine. Let's see how long the first job is going to take.
 Next question is: where is the BLAST of marcela.fasta against ncbi nr? Do I have it or not?
 
