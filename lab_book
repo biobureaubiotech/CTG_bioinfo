@@ -285,4 +285,11 @@ nohup python ../scripts/rbbh.py -a prot -t blastp -o marcela.c_elegans.PRJNA1375
 I need to run the oher ones too, but I cannot run it at the same time in the local machine. Let's see how long the first job is going to take.
 Next question is: where is the BLAST of marcela.fasta against ncbi nr? Do I have it or not?
 
+Even though I have this file all.lf.uniprot.final.blast - which comprises all the 
+
+
+24th of May, 2017
+Running the RBBH for marcela.fasta and Mytilus proteins (murgarella et al, 2016).
+python ../../scripts/rbbh.py -a prot -t blastp -o marcela.Mytilus.galloprovincialis.aa.RBBH --threads=2 marcela.fasta Mytilus.galloprovincialis.aa
+
 
