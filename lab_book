@@ -330,3 +330,6 @@ blastp -query sequence-proteins-JU.fasta -db C.gigas.M.gallo.all.genome.proteins
 The idea is to identify which protein is which between the two db, because they have different IDs. And then I can explore more the RBBH results.
 
 perl ../../scripts/BLASTcovBH.pl sequence-proteins-JU.C.gigas.M.gallo.all.genome.proteins.1e05 > sequence-proteins-JU.C.gigas.M.gallo.all.genome.proteins.1e05.covBH
+Ok, so for the 17 proteins of molluscan reproduction only vasa is present in the RBBH (with both: small db and whole c.gigas genome).
+
+
