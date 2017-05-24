@@ -285,7 +285,10 @@ nohup python ../scripts/rbbh.py -a prot -t blastp -o marcela.c_elegans.PRJNA1375
 I need to run the oher ones too, but I cannot run it at the same time in the local machine. Let's see how long the first job is going to take.
 Next question is: where is the BLAST of marcela.fasta against ncbi nr? Do I have it or not?
 
-Even though I have this file all.lf.uniprot.final.blast - which comprises all the 
+Even though I have this file all.lf.uniprot.final.blast - which comprises all the marcela.fasta matches with UNIPROT or (the ones
+that did not have a match with Uniprot) with NR NCBI, I'm running a complete BLAST against NR NCBI
+perl /data2/Marcela/scripts/split_multifasta.pl --input_file=marcela.fasta --output_dir=/data2/Marcela/datanote/ --seqs_per_file=20239
+nohup /data2/Marcela/scripts/ncbi-blast-2.4.0+/bin/blastp -query marcela.*.fasta -db /data2/ncbl/db/nr -evalue 1e-05 -num_threads 4 -out marcela.*.fasta.NR.1e-05 &
 
 
 24th of May, 2017
