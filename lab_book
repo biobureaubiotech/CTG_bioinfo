@@ -306,9 +306,15 @@ itr6_12467_p.g169.t1    AGAP000462-PA   164     164     100     100     164     
 Outros:
 itr6_222_pil.g2778.t1   AGAP010929-PA   446     447     99      98      440     96.591  905
 
-Putting all these tables into google docs.
-RBBH-marcela.anopheles-wholegenomeAndsmallDB-check.xlsx - are the RBBH (reciprocal best blast hits) found when reciprocally 
+Uploading all these tables into google docs:
+
+1-) RBBH-marcela.anopheles-wholegenomeAndsmallDB-check.xlsx - are the RBBH (reciprocal best blast hits) found when reciprocally 
 blasting the whole proteins predicted for L. fortunei (marcela.fasta) with the whole proteins from the anopheles genome (esembl). 
 Also, these RBBH were checked against RBBH run with a smaller db (from 24th of April, 2017 descripton), which had only the fertility genes of interest. 
+2-) genomes-marcela.Anopheles_gambiae.AgamP4.pep.all.RBBH - analysis result of RBBH (reciprocal best blast hits) found when reciprocally blasting the whole 
+proteins predicted for L. fortunei (marcela.fasta) with the whole proteins from the anopheles genome (esembl). 
+3-) Anopheles_gambiae.AgamP4.pep.crisanti.blastp1e05.covBH.RBBH.xlsx - its an update of previous Ju’s table, but now presenting the RBBH in bold.
+
+
 
 
