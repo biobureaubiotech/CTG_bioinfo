@@ -291,5 +291,5 @@ Even though I have this file all.lf.uniprot.final.blast - which comprises all th
 24th of May, 2017
 Running the RBBH for marcela.fasta and Mytilus proteins (murgarella et al, 2016).
 python ../../scripts/rbbh.py -a prot -t blastp -o marcela.Mytilus.galloprovincialis.aa.RBBH --threads=2 marcela.fasta Mytilus.galloprovincialis.aa
-
+python ../../scripts/rbbh.py -a prot -t blastp -o marcela.Crassostrea_gigas.GCA_000297895.1.30.pep.all.fa.RBBH --threads=4 marcela.fasta Crassostrea_gigas.GCA_000297895.1.30.pep.all.fa
 
