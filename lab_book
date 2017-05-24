@@ -322,3 +322,12 @@ proteins predicted for L. fortunei (marcela.fasta) with the whole proteins from 
 Running RBBH for c_elegans again because of the IDs
 python ../../scripts/rbbh.py -a prot -t blastp -o marcela.c_elegans.PRJNA13758.WS258.protein.1.glued.faRBBH --threads=4 marcela.fasta c_elegans.PRJNA13758.WS258.protein.1.glued.fa
 
+So, I've run RBBH for marcela.fasta against m.gallo and c.gigas whole-genome-predicted proteins and now I'm blasting this db
+against the reduced reproductive proteins of interested ju has created (sequence-proteins-JU.fasta).
+
+cat Crassostrea_gigas.GCA_000297895.1.30.pep.all.fa Mytilus.galloprovincialis.aa > C.gigas.M.gallo.all.genome.proteins.fa
+blastp -query C.gigas.M.gallo.all.genome.proteins.fa -db sequence-proteins-JU.fasta -evalue 1e-05 -num_threads 4 -out C.gigas.M.gallo.all.genome.proteins.sequence-proteins-JU.1e05 &
+The idea is to identify which protein is which between the two db, because they have different IDs. And then I can explore more the RBBH results.
+
+
+
