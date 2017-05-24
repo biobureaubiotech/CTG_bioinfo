@@ -278,7 +278,7 @@ OBS 2: I've created a folder Promoters in the googledocs, inside the folders EXE
 Today I've discussed with Ju Americo that we should check a best reciprocal Blast hit (RBBH) for marcela.fasta against all proteins from
 (1) anopheles genome, (2) c.elegans genome, (3) c. gigas, (4) m. galloprovincialis.
 I've started to run the RBBH for anopheles (locally)
-bioma@bioma-XPS-8300:~/2017_marcela/CTG$ python ../../scripts/rbbh.py -a prot -t blastp -o marcela.Anopheles_gambiae.AgamP4.pep.all.RBBH --threads=4 marcela.fasta Anopheles_gambiae.AgamP4.pep.all.fa
+bioma@bioma-XPS-8300:~/2017_marcela/CTG$ python ../../scripts/rbbh.py -a prot -t blastp -o  genomes-marcela.Anopheles_gambiae.AgamP4.pep.all.RBBH --threads=4 marcela.fasta Anopheles_gambiae.AgamP4.pep.all.fa
 
 nohup python ../scripts/rbbh.py -a prot -t blastp -o marcela.c_elegans.PRJNA13758.WS258.protein.fa.RBBH --threads=8 ../marcela.fasta.an/marcela.fasta c_elegans.PRJNA13758.WS258.protein.fa
 
@@ -292,4 +292,23 @@ Even though I have this file all.lf.uniprot.final.blast - which comprises all th
 Running the RBBH for marcela.fasta and Mytilus proteins (murgarella et al, 2016).
 python ../../scripts/rbbh.py -a prot -t blastp -o marcela.Mytilus.galloprovincialis.aa.RBBH --threads=2 marcela.fasta Mytilus.galloprovincialis.aa
 python ../../scripts/rbbh.py -a prot -t blastp -o marcela.Crassostrea_gigas.GCA_000297895.1.30.pep.all.fa.RBBH --threads=4 marcela.fasta Crassostrea_gigas.GCA_000297895.1.30.pep.all.fa
+
+Organizing RBBH files and results after running it with whole genomes.
+For anopheles, the RBBH are similar when done with the smaller db, there is only one more, and one out
+#A_id   B_id    A_length        B_length        A_qcovhsp       B_qcovhsp       length  pident  bitscore
+itr6_18008_p.g24.t1     AGAP003228-PA   208     429     92      53      228     72.807  329
+itr6_2417_pi.g1791.t1   AGAP009459-PA   303     298     98      99      297     70.370  458
+itr6_4125_pi.g1566.t1   AGAP004283-PA   97      157     93      64      101     72.277  144
+itr6_222_pil.g2778.t1   AGAP010929-PA   446     447     99      98      440     96.591  905
+itr6_2014_pi.g1174.t1.1.57f6923d        AGAP003622-PA   287     415     95      66      273     73.626  427
+itr6_10681_p.g56.t1     AGAP005800-PA   416     717     100     58      416     73.558  619
+itr6_12467_p.g169.t1    AGAP000462-PA   164     164     100     100     164     71.951  258 (não achou no RBBH com os genomas completos)
+Outros:
+itr6_222_pil.g2778.t1   AGAP010929-PA   446     447     99      98      440     96.591  905
+
+Putting all these tables into google docs.
+RBBH-marcela.anopheles-wholegenomeAndsmallDB-check.xlsx - are the RBBH (reciprocal best blast hits) found when reciprocally 
+blasting the whole proteins predicted for L. fortunei (marcela.fasta) with the whole proteins from the anopheles genome (esembl). 
+Also, these RBBH were checked against RBBH run with a smaller db (from 24th of April, 2017 descripton), which had only the fertility genes of interest. 
+
 
