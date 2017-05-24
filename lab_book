@@ -319,5 +319,6 @@ proteins predicted for L. fortunei (marcela.fasta) with the whole proteins from 
 3-) Anopheles_gambiae.AgamP4.pep.crisanti.blastp1e05.covBH.RBBH.xlsx - its an update of previous Ju’s table, but now presenting the RBBH in bold.
 
 
-
+Running RBBH for c_elegans again because of the IDs
+python ../../scripts/rbbh.py -a prot -t blastp -o marcela.c_elegans.PRJNA13758.WS258.protein.1.glued.faRBBH --threads=4 marcela.fasta c_elegans.PRJNA13758.WS258.protein.1.glued.fa
 
