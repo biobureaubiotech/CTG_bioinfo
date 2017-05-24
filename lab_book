@@ -329,5 +329,5 @@ cat Crassostrea_gigas.GCA_000297895.1.30.pep.all.fa Mytilus.galloprovincialis.aa
 blastp -query C.gigas.M.gallo.all.genome.proteins.fa -db sequence-proteins-JU.fasta -evalue 1e-05 -num_threads 4 -out C.gigas.M.gallo.all.genome.proteins.sequence-proteins-JU.1e05 &
 The idea is to identify which protein is which between the two db, because they have different IDs. And then I can explore more the RBBH results.
 
-
+perl ../../scripts/BLASTcovBH.pl C.gigas.M.gallo.all.genome.proteins.sequence-proteins-JU.1e05 > C.gigas.M.gallo.all.genome.proteins.sequence-proteins-JU.1e05.covBH
 
