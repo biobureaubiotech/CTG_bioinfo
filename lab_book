@@ -348,3 +348,12 @@ Now I've decided to do a BLAST of these sequences with the whole-genome-predicte
 blastp -query vitelogenin.gigas.mytilus.uniprot.fa -db C.gigas.M.gallo.all.genome.proteins.fa -evalue 1e-05 -out vitelogenin.gigas.mytilus.uniprot.C.gigas.M.gallo.all.genome.proteins.fa1e05 &
 perl ../../scripts/BLASTcovBH.pl vitelogenin.gigas.mytilus.uniprot.C.gigas.M.gallo.all.genome.proteins.fa1e05 > vitelogenin.gigas.mytilus.uniprot.C.gigas.M.gallo.all.genome.proteins.fa1e05.covBH
 
+25th of May, 2017
+
+Today I'm organizing all the results for the genes of interest found in comparison with A. gambiae, c. elegans or molluscan (c. gigas
+and m. gallo). The results of the RBBH from whole-genome comparisons are similar to the ones done with the smaller datasets.
+After conferming the RBBH, I went to see which was the function of the LF protein when BLASTed against Uniprot/NR.
+So files containing the RBBH (RBBH-marcela.anopheles-wholegenomeAndsmallDB-check.xlsx , c_elegans_RBBH-confirmation.xlsx) contain
+also the fuction description from the best hit found in the BLAST against Uniprot/NR. For the molluscan, before the only RBBH was
+for the vasa protein, and it was confirmed with the RBBH against c. gigas whole genome.
+
