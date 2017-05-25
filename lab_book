@@ -332,4 +332,19 @@ The idea is to identify which protein is which between the two db, because they 
 perl ../../scripts/BLASTcovBH.pl sequence-proteins-JU.C.gigas.M.gallo.all.genome.proteins.1e05 > sequence-proteins-JU.C.gigas.M.gallo.all.genome.proteins.1e05.covBH
 Ok, so for the 17 proteins of molluscan reproduction only vasa is present in the RBBH (with both: small db and whole c.gigas genome).
 
+Searching for vitelogenin:
+1-) I went to Uniprot and download vitelogenins for c. gigas and 'mytilus'. Total of 6 proteins, including fragments (file: vitelogenin.gigas.mytilus.uniprot.fa)
+The first BLAST with marcela.fasta:
+
+ blastp -query vitelogenin.gigas.mytilus.uniprot.fa -db marcela.fasta -evalue 1e-05 -out vitelogenin.gigas.mytilus.uniprot.marcela.fasta1e05 &
+
+tr|G9JJT9|G9JJT9_CRAGI  itr6_234_pil.g2949.t1   39.13   92      56      0       23      114     1483    1574    3e-19   85.9    44.02   5.46
+tr|K1QNA2|K1QNA2_CRAGI  itr6_234_pil.g2949.t1   32.89   681     336     121     52      722     162     731     7e-109  387     27.83   33.81
+tr|K1QFM6|K1QFM6_CRAGI  itr6_11658_p.g77.t1     50.25   396     194     3       70      463     1       395     3e-137  436     83.30   14.58
+tr|K1QMJ1|K1QMJ1_CRAGI  itr6_11658_p.g77.t1     38.99   277     167     2       6       282     8       282     2e-60   207     96.52   10.15
+tr|Q49P77|Q49P77_MYTED  itr6_234_pil.g2949.t1   25.56   223     85      81      14      236     162     303     7e-16   76.6    94.09   8.42
+
+Now I've decided to do a BLAST of these sequences with the whole-genome-predicted sequences from m. gallo and c. gigas.
+blastp -query vitelogenin.gigas.mytilus.uniprot.fa -db C.gigas.M.gallo.all.genome.proteins.fa -evalue 1e-05 -out vitelogenin.gigas.mytilus.uniprot.C.gigas.M.gallo.all.genome.proteins.fa1e05 &
+perl ../../scripts/BLASTcovBH.pl vitelogenin.gigas.mytilus.uniprot.C.gigas.M.gallo.all.genome.proteins.fa1e05 > vitelogenin.gigas.mytilus.uniprot.C.gigas.M.gallo.all.genome.proteins.fa1e05.covBH
 
