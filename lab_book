@@ -26,7 +26,8 @@ blastp -query marcela.fasta -db molluscan_genes/mollusca.rep.fa -evalue 1e-05 -n
 April, 25th 2017
 
 -BLASTing all reproduction mollucans mRNA and proteins against marcela.fasta
-I'm doing this in Amazon, in the isntance called CTG_BLAST 
+I'm doing this in Amazon, in the isntance called CTG_BLAST i-0b326ee60f77046d7
+
  blastp -query marcela.fasta -db molluscan_genes/mollusca.rep.fa -evalue 1e-05 -num_threads 4 -out marcela.mollusca.rep.fa1e05 &
  
 
