@@ -358,3 +358,16 @@ So files containing the RBBH (RBBH-marcela.anopheles-wholegenomeAndsmallDB-check
 also the fuction description from the best hit found in the BLAST against Uniprot/NR. For the molluscan, before the only RBBH was
 for the vasa protein, and it was confirmed with the RBBH against c. gigas whole genome.
 
+20th of June, 2017.
+
+Juliana Americo had selected 266 molluscan genes of interested in NCBI or Uniprot. I have - however - run the RBBH for the complete set of 
+proteins for the C. gigas and M. gallo (murgarella) genomes. Then, the second thing I did was to run RBBH for the 266 proteins
+selected by Ju against C.gigas and M. gallo genome-predicted proteins: so then I could have the ID of the protein in the genome
+to compare with the RBBH result against LF (marcela.Mytilus.galloprovincialis.aa.RBBH and marcela.Crassostrea_gigas.GCA_000297895.1.30.pep.all.fa.RBBH). 
+
+The RBBH for 266 agains genome-predicted-proteins:
+python ../../scripts/rbbh.py -a prot -t blastp -o Ptn_Reproduction_Mollusca_dbC.gigas.M.gallo.all.genome.proteins.fa.RBBH --threads=4 C.gigas.M.gallo.all.genome.proteins.fa Ptn_Reproduction_Mollusca_db.fasta
+
+After the comparisons I found the vasa protein but also the estrogen receptor protein with RBBH against LF. How I did that?
+I checked the IDS of the genome-predicted-proteins in here Ptn_Reproduction_Mollusca_dbC.gigas.M.gallo.all.genome.proteins.fa.RBBH
+and checked if they were present in here marcela.Mytilus.galloprovincialis.aa.RBBH or marcela.Crassostrea_gigas.GCA_000297895.1.30.pep.all.fa.RBBH
