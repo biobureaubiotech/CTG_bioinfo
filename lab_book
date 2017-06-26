@@ -371,3 +371,21 @@ python ../../scripts/rbbh.py -a prot -t blastp -o Ptn_Reproduction_Mollusca_dbC.
 After the comparisons I found the vasa protein but also the estrogen receptor protein with RBBH against LF. How I did that?
 I checked the IDS of the genome-predicted-proteins in here Ptn_Reproduction_Mollusca_dbC.gigas.M.gallo.all.genome.proteins.fa.RBBH
 and checked if they were present in here marcela.Mytilus.galloprovincialis.aa.RBBH or marcela.Crassostrea_gigas.GCA_000297895.1.30.pep.all.fa.RBBH
+
+
+26th of June, 2017
+Today I'm trying another approach to find the insertion area in LF genome. Ju Americo found a paper where they state housekeeping
+genes are usually organized in clusters inside the geneome (https://drive.google.com/file/d/0B2pYU5fjrq3EYThkUjBBZWFKLUk/view?ts=595102d4)
+Therefore, if we find a area between such genes, the possibility of this area to be expressed is high.
+
+So, right now I'll download the 400 proteins that state as coming from housekeeping genes from RefSeq:
+Batchentry - list of IDs - send to coding file (proteins).
+To eliminate all empty lines of a file:
+:g/^$/d
+And now running blast with the 408 housekeeping proteins
+makeblastdb -in housekeeping.fa -dbtype prot
+blastp -query marcela.fasta -db housekeeping.fa -evalue 1e-05 -num_threads 4 -out marcela.fasta.housekeeping.1e-05 &
+
+
+
+
