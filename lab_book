@@ -387,5 +387,14 @@ makeblastdb -in housekeeping.fa -dbtype prot
 blastp -query marcela.fasta -db housekeeping.fa -evalue 1e-05 -num_threads 4 -out marcela.fasta.housekeeping.1e-05 &
 
 
+27th of June, 2017
+
+How to get all spaces were there is no gene in a gff?
+
+beedtools complement -i marcelAAAa_pasa.gene_structures_post_PASA_updates.85229.gff3 -g /home/bioma/LF.genome.blas.fasta.genomefile
+
+How to generate the genome file (-g)?
+samtools faidx LF.genome.blas.fasta
+awk -v OFS='\t' {'print $1,$2'} lLF.genome.blas.fasta.fai > LF.genome.blas.fasta.genomefile
 
 
