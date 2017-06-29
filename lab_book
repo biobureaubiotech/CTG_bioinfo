@@ -398,3 +398,27 @@ samtools faidx LF.genome.blas.fasta
 awk -v OFS='\t' {'print $1,$2'} lLF.genome.blas.fasta.fai > LF.genome.blas.fasta.genomefile
 
 
+29 June,2017
+
+Nearly all results for the first technical delivery (gene targets and insetion area) are ready. Bellow one find the description
+and gdrive location of all files:
+
+For insertion area: Files listed bellow are here: https://drive.google.com/drive/u/1/folders/0B2IClYPbMhLAZF83U2ZfSjZZV1E
+- Intergenic regions coodernates for all scaffolds (LF.genome.intergenic)
+- Housekeeping LF blast result (marcela.fasta.housekeeping.1e-05.covBH)
+- Intergenic regions coordenates only for scaffolds that have housekeeping genes (LF.genome.Intergenic-for-housekeeping.coords)
+- Specific area chosen for insertion: scaffold FASTA file (L_FORTUNEI.itr6_10266_.fa)
+- Specific area chosen for insertion: gff of scaffold with all the coordenates for the 4 genes coded in this scaffold, including the two convergent genes (itr6_10266_.ok.gff)
+- 2 FASTA files for each of the two convergent genes containing: mrna, coding seq and protein (itr6_10266_p.g262.t1.codingSeq-mrna-protein , itr6_10266_p.g263.t1.codingSeq-mrna-protein.fasta)
+
+https://drive.google.com/drive/u/1/folders/0B2IClYPbMhLAZF83U2ZfSjZZV1E
+
+
+For gene targets. Files listed bellow are here: https://drive.google.com/drive/u/1/folders/0B2pYU5fjrq3ENGZrY3IteGN4T0U
+- gff (genome location) for all 27 gene targets (LF.gene.targets.gff3)
+- mrna sequences for all 27 gene targets (gene-targets.mrna)
+- coding seq for all 27 gene targets (gene-targets.codingseq)
+- genome scaffolds were this sequences are (LF.gene.targets.scaffold.fasta)
+
+
+
