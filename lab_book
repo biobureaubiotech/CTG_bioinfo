@@ -437,6 +437,15 @@ I'm looking for the promotor regions in some specific genes Ju Americo has selec
 ) in sheet3, you find the LF ortologs of such genes, them the RBBH or not, then the BLAST result once run against NCBI nr, then gene position in scaffold, and
 the genes that come just before and after.
 
+Also, Ju Americo would like to know if such genes are expressed in the transcriptomes we already have sequenced (for Marcela's thesis).
+The thing is we have not made a diferential expression analysis in such data. But one thing we can check is if such genes are present
+or absent in the de novo assembled transcripts for each mussel (we have sequenced 3 mussels, 4 tissues). Even better would be to
+assembly with trinity transcripts for each tissue, or use cufflinks for such.
+
+Right now, the only thing we have is a blast result against the trinity sets for each mussel.
+1-) First I've created a db with the 7 LF ortologs of the sequences Ju has required:
+
+
 
 
 
