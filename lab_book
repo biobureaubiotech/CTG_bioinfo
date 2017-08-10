@@ -454,6 +454,8 @@ Then I saved only blast results where 90% or more of the db sequence is inside t
 /home/bioma/2017_marcela/CTG/Trinity.1.lf.genes.for.promotersblastx1e05.covBH.id2.90
 /home/bioma/2017_marcela/CTG/Trinity.6.lf.genes.for.promotersblastx1e05.covBH.id2.90
 
+All the files are also in biobureau gdocs: https://drive.google.com/drive/u/1/folders/0B2IClYPbMhLARFVhaGNEMFNwcms
+
 All the 7 genes Ju has selected are constitutive, or expressed in the embrio and on (https://docs.google.com/spreadsheets/d/18NxP29QCvPcm0z8sIMKE0lSYLbL8YbtM-svhHWC33q0/edit#gid=0)
 Only vasa is supposed to be expressed only in the germinative cells. So, I've checked the trinity sets - that should not have this transcript,
 since it was sequenced for digestive gland, mantle, foot and gills of adults - blast results, and really did not found vasa for the trinity set 3 and 6.
@@ -464,7 +466,7 @@ TR79527-c2_g1_i3  itr6_4515_pi.g108.t1  100.00  562 0  0  1111 2796 17 578 0.0  
 This is a m8 result plus 2 last collumns, that show % of query coverage and % of subject coverage. As we can see, this results
 is the best hit and only covers 44.44% of the trinity transcript.
 
-
+In the blast results (here lines 449-451) one can also find other blast results for the 7 genes Ju has selected (line 447). 
 
 
 
