@@ -437,13 +437,35 @@ I'm looking for the promotor regions in some specific genes Ju Americo has selec
 ) in sheet3, you find the LF ortologs of such genes, them the RBBH or not, then the BLAST result once run against NCBI nr, then gene position in scaffold, and
 the genes that come just before and after.
 
-Also, Ju Americo would like to know if such genes are expressed in the transcriptomes we already have sequenced (for Marcela's thesis).
-The thing is we have not made a diferential expression analysis in such data. But one thing we can check is if such genes are present
+Also, Ju Americo would like to know if such genes are expressed in the transcriptomes we already have sequenced (from Marcela's thesis).
+The thing is we have not done a diferential expression analysis in such data. But one thing we can check is if such genes are present
 or absent in the de novo assembled transcripts for each mussel (we have sequenced 3 mussels, 4 tissues). Even better would be to
 assembly with trinity transcripts for each tissue, or use cufflinks for such.
 
 Right now, the only thing we have is a blast result against the trinity sets for each mussel.
 1-) First I've created a db with the 7 LF ortologs of the sequences Ju has required:
+/home/bioma/2017_marcela/CTG/lf.genes.for.promoters.fa
+Then, I've run a blastx of the 3 sets of trinity transcripts against such db. The blast results are:
+/home/bioma/2017_marcela/CTG/Trinity.1.lf.genes.for.promotersblastx1e05.covBH
+/home/bioma/2017_marcela/CTG/Trinity.3.lf.genes.for.promotersblastx1e05.covBH
+/home/bioma/2017_marcela/CTG/Trinity.6.lf.genes.for.promotersblastx1e05.covBH
+Then I saved only blast results where 90% or more of the db sequence is inside the blast result.
+/home/bioma/2017_marcela/CTG/Trinity.3.lf.genes.for.promotersblastx1e05.covBH.id2.90
+/home/bioma/2017_marcela/CTG/Trinity.1.lf.genes.for.promotersblastx1e05.covBH.id2.90
+/home/bioma/2017_marcela/CTG/Trinity.6.lf.genes.for.promotersblastx1e05.covBH.id2.90
+
+All the 7 genes Ju has selected are constitutive, or expressed in the embrio and on (https://docs.google.com/spreadsheets/d/18NxP29QCvPcm0z8sIMKE0lSYLbL8YbtM-svhHWC33q0/edit#gid=0)
+Only vasa is supposed to be expressed only in the germinative cells. So, I've checked the trinity sets - that should not have this transcript,
+since it was sequenced for digestive gland, mantle, foot and gills of adults - blast results, and really did not found vasa for the trinity set 3 and 6.
+For mussel 1, it seems to have a hit,eventhough is not a perfect hit:
+
+TR79527-c2_g1_i3  itr6_4515_pi.g108.t1  100.00  562 0  0  1111 2796 17 578 0.0  1127  44.44  91.68
+
+This is a m8 result plus 2 last collumns, that show % of query coverage and % of subject coverage. As we can see, this results
+is the best hit and only covers 44.44% of the trinity transcript.
+
+
+
 
 
 
