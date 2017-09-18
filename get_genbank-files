@@ -1,0 +1,35 @@
+Rio, 18 de Setembro de 2017
+
+Há uma semana, a Juliana me pediu para, a partir dos arquivos GFF e FASTA do genoma do mexilhão (Limnoperna fortunei), gerar um arquivo
+no formato GENBANK dos scaffolds nos quais estávamos interessados (mais informações, ver o arquivo "Lista de genes - promotores de interesse (para busca no genoma do M. dourado)")
+
+Segue, abaixo, o protocolo desenvolvido para esta finalidade:
+
+[Protocolo]
+
+	- Inicialmente, tínhamos dois arquivos:
+		- o FASTA, que continha a sequência de nucleotídeos do genoma do mexilhão
+		- o GFF, que continha as anotações (genes, mRNA, CDS..) do genoma do mexilhão
+
+	- Objetivo: 
+		- selecionar os scaffolds específicos nos quais estávamos interessados
+		- mesclar as informações do arquivo FASTA e do GFF para produzir um arquivo GENBANK, a ser aberto usando o programa SnapGene
+
+	- Etapas: 
+		1) Obter o FASTA de um scaffold específico a partir do FASTA completo do genoma mexilhão
+			. Para esta etapa, foi escrito o script get_scaffold_fasta.py, que pede como input o arquivo FASTA do genoma completo e o número do scaffold de interesse
+			. O output do programa é um arquivo FASTA nomeado "output_número-do-scaffold.fasta"  
+		2) Obter o GFF de um scaffold específico a partir do GFF completo do genoma do mexilhão
+			. Para esta etapa, foi escrito o script get_scaffold_gff, que pede como input o arquivo GFF do genoma completo e o número do scaffold de interesse
+			. O output do programa é um arquivo GFF nomeado "scaffold_número-do-scaffold.gff"
+		3) Mesclar os arquivos FASTA e GFF para gerar arquivo GENBANK
+			. Para esta etapa, foi usada a ferramenta "seqret", a ser rodada no prompt de comando após instalação do pacote EMBOSS (http://www.ebi.ac.uk/Tools/sfc/emboss_seqret/help/)
+				- "seqret -sequence FASTA_file.fasta -feature -fformat gff -fopenfile GFF_file.gff -osformat genbank -outseq GENBANK_file.genbank"
+			. O output desta etapa é o arquivo GENBANK, ao qual deve ser atribuído um nome (sugestão: manter o mesmo padrão "scaffold_número-do-scaffold")
+				- por exemplo, para o scaffold 10360, o nome sugerido ficaria: scaffold_10360.genbank
+		4) Corrigir os arquivos GENBANK gerados na etapa anterior
+			. Os arquivos gerados pelo comando seqret possuíam o padrão "itr6_número-do-scaffold_:" antes de cada faixa de sequências. Esse padrão impedia a correta leitura do arquivo GENBANK
+				. Solução: usando um editor de texto simples, substituir estes padrões (ex: itr6_10360_:) pelo símbolo "<" (sem aspas)
+
+		Finalmente temos um arquivo GENBANK, cujas FEATURES podem ser visualizadas usando um programa de visualização/edição de sequências como o SnapGene. 
+			
