@@ -469,6 +469,12 @@ is the best hit and only covers 44.44% of the trinity transcript.
 In the blast results (here lines 449-451) one can also find other blast results for the 7 genes Ju has selected (line 447). 
 
 
+October 30th, 2017
+
+Luana and João have been working on assemblying L.fortunei transcriptomes of each indidual and specific tissue. The software being used for it is Trinity.
+The assembly of tissue C, from organism 1, was the following:
+
+nohup Trinity --seqType fq --left 1c_S4_R1_001.D.gland.fastq --right 1c_S4_R2_001.D.gland.fastq --max_memory 8G 
 
 
 
